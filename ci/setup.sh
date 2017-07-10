@@ -1,4 +1,9 @@
 #!/bin/sh
 
-composer install
-php artisan serve --quiet 
+set -e
+
+phpenv local 5.6
+composer install --no-interaction
+
+
+php artisan serve --quiet
